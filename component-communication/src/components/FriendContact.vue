@@ -1,7 +1,5 @@
 <template>
   <li>
-    <!-- <h2>{{ name }} {{ friendIsFavourite === '1' ? '(Favourite)' : ''}}</h2> -->
-    <!-- <h2>{{ name }} {{ friendIsFavourite ? '(Favourite)' : ''}}</h2> -->
     <h2>{{ name }} {{ isFavourite ? '(Favourite)' : ''}}</h2>
     <h2></h2>
     <button @click="toggleFavourite">Toggle Favourite</button>
@@ -52,27 +50,10 @@ export default {
   },
 
   emits: ['toggle-favourite', 'delete'],
-  // emits: {
-  //   'toggle-favourite': function(id) {
-  //     if(id) {
-  //       return true;
-  //     }else{
-  //       console.warn('Id is Missing')
-  //       return false
-  //     }
-  //   }
-  // },
   
   data() {
     return {
       detailsAreVisible: false,
-      // friend: {
-      //   id: "amadou",
-      //   name: "Amadou Marong",
-      //   phone: "0123 45678 90",
-      //   email: "amadou@localhost.com",
-      // },
-      // friendIsFavourite: this.isFavourite
     };
   },
   methods: {
@@ -80,12 +61,6 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavourite(){
-      // if(this.friendIsFavourite === '1'){
-      //   this.friendIsFavourite = '0'
-      // }else {
-      //   this.friendIsFavourite = '1'
-      // }
-      // this.friendIsFavourite = !this.friendIsFavourite
       this.$emit('toggle-favourite', this.id);
     },
     
