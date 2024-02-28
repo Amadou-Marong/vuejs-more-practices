@@ -16,13 +16,6 @@
         @toggle-favourite="toggleFavouriteStatus"
         @delete="deleteContact">
       </friend-contact>
-      
-      <!-- <friend-contact 
-        name="Modou Boy" 
-        phone-number="0253 346 5663" 
-        email-address="modou@gmail.com">
-      </friend-contact> -->
-      
     </ul>
     
   </section>
