@@ -6,17 +6,17 @@
     <component :is="selectedTab"></component>
 </template>
 <script>
-import StoredResourses from './StoredResources.vue';
+import StoredResources from './StoredResources.vue';
 import AddResource from './AddResource.vue';
 export default {
     components: {
-        StoredResourses,
+        StoredResources,
         AddResource
     },
     data() {
         return {
             selectedTab: 'stored-resources',
-            storedResourses: [
+            storedResources: [
                 {
                     id: 'official-guide',
                     title: 'The Official Guide',
@@ -34,7 +34,7 @@ export default {
     },
     provide() {
         return {
-            resourses: this.storedResourses
+            resources: this.storedResources
         }
     },
     methods: {

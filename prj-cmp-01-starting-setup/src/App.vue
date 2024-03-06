@@ -1,6 +1,6 @@
 <template>
     <the-header title="Learning Resources"></the-header>
-
+    <the-resources></the-resources>
 </template>
 <script>
 import TheHeader from './Components/Layout/TheHeader.vue';
