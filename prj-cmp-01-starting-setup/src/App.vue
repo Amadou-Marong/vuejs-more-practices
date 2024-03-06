@@ -13,24 +13,6 @@ export default {
         StoredResourses,
         TheHeader,
     },
-    data() {
-        return {
-            storedResourses: [
-                {
-                    id: 'official-guide',
-                    title: 'The Official Guide',
-                    description: 'The Official Vuejs Documentation',
-                    link: 'https://vuejs.org'
-                },
-                {
-                    id: 'google',
-                    title: 'Google',
-                    description: 'The Official Google Homepage',
-                    link: 'https://google.com'
-                }
-            ]
-        }
-    }
 }
 </script>
 <style>
