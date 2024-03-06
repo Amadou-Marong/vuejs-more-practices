@@ -7,10 +7,11 @@
 <script>
 import StoredResourses from './Components/learning-resources/StoredResources.vue';
 import TheHeader from './Components/Layout/TheHeader.vue';
+
 export default {
     components: {
         StoredResourses,
-        TheHeader
+        TheHeader,
     },
     data() {
         return {
