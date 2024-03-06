@@ -1,18 +1,21 @@
 <template>
     <ul>
-        <learning-resource 
+        <!-- <learning-resource 
             v-for="res in storedResourses" 
             :key="res.id" :title="res.title" 
             :description="res.description"
             :link="res.link">
-        </learning-resource>
+        </learning-resource> -->
+        <stored-resourses :resourses="storedResourses"></stored-resourses>
     </ul>
 </template>
 <script>
-import LearningResource from './Components/learning-resources/LearningResource.vue';
+// import LearningResource from './Components/learning-resources/LearningResource.vue';
+import StoredResourses from './Components/learning-resources/StoredResources.vue';
 export default {
     components: {
-        LearningResource
+        // LearningResource
+        StoredResourses
     },
     data() {
         return {
@@ -34,3 +37,18 @@ export default {
     }
 }
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>./Components/learning-resources/StoredResources.vue
