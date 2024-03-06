@@ -2,14 +2,17 @@
     <h2>Manage Goals</h2>
     <input type="text" ref="goal">
     <button @click="setGoal">Set Goal</button>
-    <error-alert v-if="invalidInput">
-        <p>Input must not be empty</p>
-        <button @click="invalidInput = false">OK</button>
-    </error-alert>
-    <success-alert v-if="validInput">
-        <p>Goal set successfully</p>
-        <button @click="validInput = false">OK</button>
-    </success-alert>
+    <teleport to='body'>
+        <error-alert v-if="invalidInput">
+            <p>Input must not be empty</p>
+            <button @click="invalidInput = false">Okay</button>
+        </error-alert>
+        <success-alert v-if="validInput">
+            <p>Goal set successfully</p>
+            <button @click="validInput = false">Okay</button>
+        </success-alert>
+    </teleport>
+    
 </template>
 <script>
     import ErrorAlert from './ErrorAlert.vue';
