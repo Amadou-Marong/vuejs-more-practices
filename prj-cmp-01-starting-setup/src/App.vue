@@ -5,7 +5,7 @@
     </ul>
 </template>
 <script>
-import StoredResourses from './Components/learning-resources/StoredResources.vue';
+// import StoredResourses from './Components/learning-resources/StoredResources.vue';
 import TheHeader from './Components/Layout/TheHeader.vue';
 
 export default {
