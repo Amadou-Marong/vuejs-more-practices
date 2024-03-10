@@ -46,6 +46,7 @@ export default {
             rating: data[id].rating
           })
         }
+        this.results = results;
       });
     }
   } 
