@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import axios from 'axios'; // at the start of your <script> tag, before you "export default ..."
+
 export default {
   data() {
     return {
@@ -60,12 +62,22 @@ export default {
       //   rating: this.chosenRating,
       // });
 
-      fetch('https://vue-http-demo-b264b-default-rtdb.firebaseio.com/surveys.json', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name: this.enteredName, rating: this.chosenRating })
+      // fetch('https://vue-http-demo-b264b-default-rtdb.firebaseio.com/surveys.json', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({ name: this.enteredName, rating: this.chosenRating })
+      // });
+      // this.enteredName = '';
+      // this.chosenRating = null;
+
+
+      // import axios from 'axios'; // at the start of your <script> tag, before you "export default ..."
+      
+      axios.post('https://vue-http-demo-b264b-default-rtdb.firebaseio.com/surveys.json', {
+        name: this.enteredName,
+        rating: this.chosenRating,
       });
       this.enteredName = '';
       this.chosenRating = null;
