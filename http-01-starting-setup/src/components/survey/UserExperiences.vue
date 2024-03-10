@@ -38,7 +38,14 @@ export default {
           return response.json();
         }
       }).then(function(data) {
-        console.log(data);
+        const results = [];
+        for(const id in data) {
+          results.push({
+            id: id, 
+            name: data[id].name, 
+            rating: data[id].rating
+          })
+        }
       });
     }
   } 
