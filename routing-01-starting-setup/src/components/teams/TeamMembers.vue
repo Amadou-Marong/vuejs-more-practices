@@ -9,6 +9,7 @@
         :role="member.role"
       ></user-item>
     </ul>
+    <router-link to="/teams/t2">Go to team 2</router-link>
   </section>
 </template>
 
@@ -38,6 +39,9 @@ export default {
     this.members = selectedMembers;
     this.teamName = selectedTeam.name;
   },
+  watch: {
+    $route() {}
+  }
 };
 </script>
 
