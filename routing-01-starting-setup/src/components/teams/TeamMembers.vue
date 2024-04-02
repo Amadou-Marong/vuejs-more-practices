@@ -28,8 +28,8 @@ export default {
     };
   },
   methods: {
-    loadTeamMembers() {
-      const teamId = this.$route.params.teamId;
+    loadTeamMembers(route) {
+      const teamId = route.params.teamId;
       const selectedTeam = this.teams.find(team => team.id === teamId);
       const members = selectedTeam.members;
       const selectedMembers = [];
@@ -42,11 +42,11 @@ export default {
     }
   }
   created() {
-    this.loadTeamMembers();
+    this.loadTeamMembers(this.$route);
   },
   watch: {
     $route(newRoute) {
-      this.loadTeamMembers();
+      this.loadTeamMembers(newRoute);
     }
   }
 };
