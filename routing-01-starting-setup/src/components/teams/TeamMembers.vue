@@ -40,7 +40,7 @@ export default {
       this.members = selectedMembers;
       this.teamName = selectedTeam.name;
     }
-  }
+  },
   created() {
     this.loadTeamMembers(this.$route);
   },
